@@ -40,29 +40,16 @@
           <Icon name="mingcute:close-fill" class="size-7 text-text" />
         </button>
         <div v-if="isLargeScreen" class="">
-          <ul class="flex transition-all gap-x-2 items-center">
-            <NavItem iconName="iconamoon:home">Home</NavItem>
-            <NavItem iconName="mdi:about-circle-outline">About</NavItem>
-            <NavItem iconName="icons8:services">Services</NavItem>
-            <NavItem iconName="carbon:blog">Blog</NavItem>
-            <NavItem  :to="'/login'" iconName="carbon:blog">Login</NavItem>
-          </ul>
+          <Nav class="gap-x-2" />
         </div>
       </div>
       <!-- menu -->
       <Transition v-if="!isLargeScreen" name="fade">
-        <!-- :class="[{ '-top-72': isMenuOpen }, { 'top-14': !isMenuOpen }]" -->
         <div
           v-if="isMenuOpen"
           class="w-full pt-12 rounded-b-lg mt-6 left-0 top-0 z-10 bg-bg/50 backdrop-blur-md rounded-lg absolute transition-all duration-500"
         >
-          <ul class="flex transition-all px-4 flex-col items-center">
-            <NavItem iconName="iconamoon:home">Home</NavItem>
-            <NavItem iconName="mdi:about-circle-outline">About</NavItem>
-            <NavItem iconName="icons8:services">Services</NavItem>
-            <NavItem iconName="carbon:blog">Blog</NavItem>
-            <NavItem :to="'/login'" iconName="carbon:blog">Login</NavItem>
-          </ul>
+          <NavMenuLink class="px-4 flex-col" />
         </div>
       </Transition>
     </nav>
