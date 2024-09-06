@@ -1,6 +1,6 @@
 <template>
-  <div class="flex flex-col mx-6 items-center">
-    <form class="mt-6 w-full flex flex-col gap-y-2">
+  <div class="flex ps-2 flex-col mx-6 md:w-2/5 items-center">
+    <form class="md:mt-6 w-full flex flex-col gap-y-2">
       <div class="flex flex-col gap-y-2">
         <label class="self-start" for="email">Email</label>
         <input
@@ -37,9 +37,6 @@
       >
         Send
       </button>
-      <p class="text-text/50 mt-2 text-sm">
-        For questions, please contact your administrator.
-      </p>
     </form>
   </div>
 </template>

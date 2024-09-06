@@ -1,10 +1,10 @@
 <template>
-  <header class="  ">
-    <nav class="px-6 pt-6 relative top-0">
-      <div class="flex justify-between items-center">
+  <header class=" ">
+    <nav class="px-6 pt-6 sm:px-12  relative top-0">
+      <div class="flex justify-between items-center whitespace-nowrap ">
         <!-- icon -->
         <div
-          class="flex md:items-center justify-between w-2/3 md:justify-start md:gap-x-4"
+          class="flex sm:items-center  justify-between w-2/3 sm:justify-start sm:gap-x-4"
         >
           <div
             class="relative backdrop-blur-sm rounded-full"
@@ -17,7 +17,7 @@
           </div>
           <!-- text -->
           <p
-            class="text-te font-semibold w-1/3 md:text-xl"
+            class="  font-semibold md:w-1/3 md:text-xl"
             :class="{ 'z-50': isMenuOpen }"
           >
             Lucerum <span class="text-primary">Key</span>
@@ -26,7 +26,7 @@
         <!-- button1 -->
         <button
           v-if="!isMenuOpen"
-          class="p-2 rounded-full"
+          class="p-2 rounded-full block sm:hidden"
           @click="() => (isMenuOpen = !isMenuOpen)"
         >
           <Icon name="eva:menu-fill" class="size-7 text-text" />
@@ -34,14 +34,22 @@
         <!-- button2 -->
         <button
           v-else
-          class="z-50 p-2 rounded-full"
+          class="z-50 p-2 rounded-full block sm:hidden"
           @click="() => (isMenuOpen = !isMenuOpen)"
         >
           <Icon name="mingcute:close-fill" class="size-7 text-text" />
         </button>
+        <div v-if="isLargeScreen" class="">
+          <ul class="flex transition-all gap-x-2 items-center">
+            <NavItem iconName="iconamoon:home">Home</NavItem>
+            <NavItem iconName="mdi:about-circle-outline">About</NavItem>
+            <NavItem iconName="icons8:services">Services</NavItem>
+            <NavItem iconName="carbon:blog">Blog</NavItem>
+          </ul>
+        </div>
       </div>
       <!-- menu -->
-      <Transition name="fade">
+      <Transition v-if="!isLargeScreen" name="fade">
         <!-- :class="[{ '-top-72': isMenuOpen }, { 'top-14': !isMenuOpen }]" -->
         <div
           v-if="isMenuOpen"
@@ -60,8 +68,12 @@
 </template>
 <script setup>
 const isMenuOpen = ref(false);
+import { useMediaQuery } from "@vueuse/core";
+
+const isLargeScreen = useMediaQuery("(min-width: 640px)");
 </script>
-<style>
+
+<style scoped>
 fade-enter-active,
 fade-leave-active {
   transition: all 0.5s ease;
