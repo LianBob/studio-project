@@ -1,25 +1,51 @@
 <template>
   <header class="  ">
-    <nav class="">
-      <div class="flex px-6 pt-6 justify-between sticky top-0 items-center">
-        <div class="relative">
-          <Icon name="bi:person-circle" class="size-6" />
+    <nav class="px-6 pt-6 relative top-0">
+      <div class="flex justify-between items-center">
+        <!-- icon -->
+        <div
+          class="flex md:items-center justify-between w-2/3 md:justify-start md:gap-x-4"
+        >
           <div
-            class="bg-green size-2 rounded-full absolute -top-0.5 -right-0.5"
-          ></div>
+            class="relative backdrop-blur-sm rounded-full"
+            :class="{ 'z-50': isMenuOpen }"
+          >
+            <Icon name="bi:person-circle" class="size-6 md:size-8" />
+            <div
+              class="bg-green size-2 rounded-full absolute -top-0.5 -right-0.5"
+            ></div>
+          </div>
+          <!-- text -->
+          <p
+            class="text-te font-semibold w-1/3 md:text-xl"
+            :class="{ 'z-50': isMenuOpen }"
+          >
+            Lucerum <span class="text-primary">Key</span>
+          </p>
         </div>
-        <p class="text-te font-semibold">
-          Lucerum <span class="text-primary">Key</span>
-        </p>
-        <button @click="() => (isMenuOpen = !isMenuOpen)">
+        <!-- button1 -->
+        <button
+          v-if="!isMenuOpen"
+          class="p-2 rounded-full"
+          @click="() => (isMenuOpen = !isMenuOpen)"
+        >
           <Icon name="eva:menu-fill" class="size-7 text-text" />
         </button>
+        <!-- button2 -->
+        <button
+          v-else
+          class="z-50 p-2 rounded-full"
+          @click="() => (isMenuOpen = !isMenuOpen)"
+        >
+          <Icon name="mingcute:close-fill" class="size-7 text-text" />
+        </button>
       </div>
+      <!-- menu -->
       <Transition name="fade">
         <!-- :class="[{ '-top-72': isMenuOpen }, { 'top-14': !isMenuOpen }]" -->
         <div
           v-if="isMenuOpen"
-          class="w-full p-0 bg-bg/50 backdrop-blur-md rounded-lg absolute transition-all duration-500 z-10"
+          class="w-full pt-12 rounded-b-lg mt-6 left-0 top-0 z-10 bg-bg/50 backdrop-blur-md rounded-lg absolute transition-all duration-500"
         >
           <ul class="flex transition-all px-4 flex-col items-center">
             <NavItem iconName="iconamoon:home">Home</NavItem>

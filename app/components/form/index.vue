@@ -7,7 +7,7 @@
           id="email"
           name="email"
           type="email"
-          class="px-2 placeholder:opacity-80 rounded-lg py-1"
+          class="px-2 placeholder:opacity-80 focus:outline-none focus:outline-1 focus:outline-primary text-bg rounded-lg py-1"
           placeholder="lucerumKey@gmail.com"
         />
       </div>
@@ -17,7 +17,7 @@
           id="name"
           name="name"
           type="text"
-          class="px-2 placeholder:opacity-80 rounded-lg py-1"
+          class="px-2 focus:outline-1 focus:outline-primary focus:outline-none placeholder:opacity-80 text-bg rounded-lg py-1"
           placeholder="LucerumKey"
         />
       </div>
@@ -27,8 +27,8 @@
           id="password"
           name="password"
           type="password"
-          class="px-2 placeholder:opacity-100 rounded-lg py-1"
-          placeholder="lucerumKey@gmail.com"
+          class="px-2 placeholder:opacity-80 focus:outline-1 focus:outline-none focus:outline-primary text-bg rounded-lg py-1"
+          placeholder="LucerumKey1234*-"
         />
         <FormEye />
       </div>
