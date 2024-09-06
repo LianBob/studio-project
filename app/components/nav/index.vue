@@ -40,7 +40,7 @@
           <Icon name="mingcute:close-fill" class="size-7 text-text" />
         </button>
         <div v-if="isLargeScreen" class="">
-          <Nav class="gap-x-2" />
+          <NavMenu class="gap-x-2" />
         </div>
       </div>
       <!-- menu -->
@@ -49,7 +49,7 @@
           v-if="isMenuOpen"
           class="w-full pt-12 rounded-b-lg mt-6 left-0 top-0 z-10 bg-bg/50 backdrop-blur-md rounded-lg absolute transition-all duration-500"
         >
-          <NavMenuLink class="px-4 flex-col" />
+          <NavMenu class="px-4 flex-col" />
         </div>
       </Transition>
     </nav>
@@ -57,6 +57,7 @@
 </template>
 <script setup>
 const isMenuOpen = ref(false);
+import { NavMenuLink } from "#build/components";
 import { useMediaQuery } from "@vueuse/core";
 
 const isLargeScreen = useMediaQuery("(min-width: 640px)");

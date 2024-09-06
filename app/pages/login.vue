@@ -3,13 +3,15 @@
 <template>
   <div class="">
     <div
-      class="w-1/2 hidden md:block absolute  bg-text/80 top-0 right-0 bottom-0"
+      class="w-1/2 hidden md:block absolute md:overflow-y-hidden bg-text/80 top-0 right-0 bottom-0"
     ></div>
     <div class="text-center md:text-start sm:mx-16 lg:mx-0">
       <main class="flex justify-center md:mt-8 mt-8 flex-col">
         <div class="flex flex-col mx-8 gap-y-4">
           <h1 class="lg:text-6xl text-4xl">Welcome</h1>
-          <p class="opacity-80 sm:mx-12 md:mx-0 md:text-sm md:w-2/5 tracking-wide">
+          <p
+            class="opacity-80 sm:mx-12 md:mx-0 md:text-sm md:w-2/5 tracking-wide"
+          >
             Please set your username and password and update your email if
             necesary.
           </p>
