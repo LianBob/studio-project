@@ -1,10 +1,10 @@
 <template>
   <header class=" ">
-    <nav class="px-6 pt-6 sm:px-12  relative top-0">
-      <div class="flex justify-between items-center whitespace-nowrap ">
+    <nav class="px-6 pt-6 sm:px-12 relative top-0">
+      <div class="flex justify-between items-center whitespace-nowrap">
         <!-- icon -->
         <div
-          class="flex sm:items-center  justify-between w-2/3 sm:justify-start sm:gap-x-4"
+          class="flex sm:items-center justify-between w-2/3 sm:justify-start sm:gap-x-4"
         >
           <div
             class="relative backdrop-blur-sm rounded-full"
@@ -17,7 +17,7 @@
           </div>
           <!-- text -->
           <p
-            class="  font-semibold md:w-1/3 md:text-xl"
+            class="font-semibold md:w-1/3 md:text-xl"
             :class="{ 'z-50': isMenuOpen }"
           >
             Lucerum <span class="text-primary">Key</span>
@@ -45,6 +45,7 @@
             <NavItem iconName="mdi:about-circle-outline">About</NavItem>
             <NavItem iconName="icons8:services">Services</NavItem>
             <NavItem iconName="carbon:blog">Blog</NavItem>
+            <NavItem  :to="'/login'" iconName="carbon:blog">Login</NavItem>
           </ul>
         </div>
       </div>
@@ -60,6 +61,7 @@
             <NavItem iconName="mdi:about-circle-outline">About</NavItem>
             <NavItem iconName="icons8:services">Services</NavItem>
             <NavItem iconName="carbon:blog">Blog</NavItem>
+            <NavItem :to="'/login'" iconName="carbon:blog">Login</NavItem>
           </ul>
         </div>
       </Transition>
