@@ -54,7 +54,7 @@
     src="/CAndado y matapng.png"
     class="absolute blur-[1px] -z-10 bottom-0 right-2"
     format="webp"
-    width="116"
+    width="116" 
     densities="x1"
   />
 </template>
