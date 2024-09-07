@@ -1,6 +1,6 @@
 <template>
   <header class=" ">
-    <nav class="px-6 pt-6 sm:px-12  sticky z-50 top-0">
+    <nav class="px-6 pt-6 sm:px-12 sticky z-50 top-0">
       <div class="flex justify-between items-center whitespace-nowrap">
         <!-- icon -->
         <div
@@ -17,7 +17,7 @@
           </div>
           <!-- text -->
           <p
-            class="font-semibold md:w-1/3 md:text-xl"
+            class="font-semibold text-xl md:w-1/3 l"
             :class="{ 'z-50': isMenuOpen }"
           >
             Lucerum <span class="text-primary">Key</span>
@@ -39,7 +39,7 @@
         >
           <Icon name="mingcute:close-fill" class="size-7 text-text" />
         </button>
-        
+
         <div v-if="isLargeScreen" class="">
           <NavMenu class="gap-x-2" />
         </div>
@@ -50,7 +50,7 @@
           v-if="isMenuOpen"
           class="w-full pt-12 rounded-b-lg mt-6 left-0 top-0 z-10 bg-bg/50 backdrop-blur-md rounded-lg absolute transition-all duration-500"
         >
-          <NavMenu class="px-4 flex-col " />
+          <NavMenu class="px-4 flex-col" />
         </div>
       </Transition>
     </nav>
