@@ -1,13 +1,9 @@
 <template>
   <div>
-    <p>Hello tabla</p>
+    <h1 class=" font-semibold text-3xl">Explore Our Complete Studies</h1>
   </div>
 </template>
 
-<script lang="ts" setup>
+<script lang="ts" setup></script>
 
-</script>
-
-<style>
-
-</style>
+<style></style>

@@ -5,7 +5,7 @@
     <div
       class="w-1/2 hidden md:block absolute  bg-text/80 top-0 right-0 bottom-0"
     ></div>
-    <div class="text-center md:text-start sm:mx-16 lg:mx-0">
+    <div class="text-center md:text-start  sm:mx-16 lg:mx-0">
       <main class="flex justify-center md:mt-8 mt-8 flex-col">
         <div class="flex flex-col mx-8 gap-y-4">
           <h1 class="lg:text-6xl text-4xl">Welcome</h1>
@@ -37,7 +37,49 @@
       class="absolute hidden xl:block z-10 bottom-3 left-2"
       width="150"
     />
-
-    <LoginMobileDecorators class="block lg:hidden" />
+    <!-- <LoginMobileDecorators class=" " /> -->
+    <!-- movile decorators -->
+    <NuxtImg
+      src="/Llave.png"
+      class="absolute blur-[1px] -z-10 bottom-8 left-4"
+      format="webp"
+      width="56"
+      densities="x1"
+    />
+    <NuxtImg
+      src="/Llave.png"
+      class="absolute blur-[2px] -z-10 top-[430px] right-12"
+      format="webp"
+      width="80"
+      densities="x1"
+    />
+    <NuxtImg
+      src="/Llave.png"
+      class="absolute blur-sm -z-10 top-[300px] left-2"
+      format="webp"
+      width="64"
+      densities="x1"
+    />
+    <NuxtImg
+      src="/Llave.png"
+      class="absolute blur-sm -z-10 top-[60px] left-0"
+      format="webp"
+      width="116"
+      densities="x1"
+    />
+    <NuxtImg
+      src="/Llave.png"
+      class="absolute blur-sm -z-10 top-[200px] right-4"
+      format="webp"
+      width="116"
+      densities="x1"
+    />
+    <NuxtImg
+      src="/CAndado y matapng.png"
+      class="absolute blur-[1px] -z-10 bottom-0 right-2"
+      format="webp"
+      width="116"
+      densities="x1"
+    />
   </div>
 </template>

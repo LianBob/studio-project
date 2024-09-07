@@ -50,7 +50,7 @@
           v-if="isMenuOpen"
           class="w-full pt-12 rounded-b-lg mt-6 left-0 top-0 z-10 bg-bg/50 backdrop-blur-md rounded-lg absolute transition-all duration-500"
         >
-          <NavMenu class="px-4 flex-col" />
+          <NavMenu class="px-4 flex-col " />
         </div>
       </Transition>
     </nav>
