@@ -1,5 +1,5 @@
 <template>
-  <tr :class="{ 'bg-bg/10': $props.isMarked }" class="overflow-clip rounded-lg">
+  <tr :class="{ 'bg-bg/10': $props.isMarked }">
     <slot />
   </tr>
 </template>

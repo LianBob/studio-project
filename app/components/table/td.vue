@@ -1,3 +1,7 @@
 <template>
-  <td class="  text-left px-2 py-1"><slot /></td>
+  <td
+    class="text-left text-sm p-2 tracking-wide last:rounded-e-lg first:rounded-s-lg"
+  >
+    <slot />
+  </td>
 </template>

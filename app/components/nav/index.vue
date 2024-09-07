@@ -27,7 +27,7 @@
         <button
           v-if="!isMenuOpen"
           class="p-2 rounded-full block sm:hidden"
-          @click="() => (isMenuOpen = !isMenuOpen)"
+          @click="toggleMenu"
         >
           <Icon name="eva:menu-fill" class="size-7 text-text" />
         </button>
@@ -35,7 +35,7 @@
         <button
           v-else
           class="z-50 p-2 rounded-full block sm:hidden"
-          @click="() => (isMenuOpen = !isMenuOpen)"
+          @click="toggleMenu"
         >
           <Icon name="mingcute:close-fill" class="size-7 text-text" />
         </button>
@@ -50,7 +50,7 @@
           v-if="isMenuOpen"
           class="w-full pt-12 rounded-b-lg mt-6 left-0 top-0 z-10 bg-bg/50 backdrop-blur-md rounded-lg absolute transition-all duration-500"
         >
-          <NavMenu class="px-4 flex-col" />
+          <NavMenu @closeMenu="closeMenu" class="px-4 flex-col" />
         </div>
       </Transition>
     </nav>
@@ -58,6 +58,8 @@
 </template>
 <script setup>
 const isMenuOpen = ref(false);
+const toggleMenu = () => (isMenuOpen.value = !isMenuOpen.value);
+const closeMenu = () => (isMenuOpen.value = false);
 import { useMediaQuery } from "@vueuse/core";
 
 const isLargeScreen = useMediaQuery("(min-width: 640px)");

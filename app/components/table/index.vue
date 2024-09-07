@@ -1,13 +1,13 @@
 <template>
-  <table>
+  <table class="">
     <thead>
       <TableTr class="bg-bg/50">
-        <th class="text-left px-2 py-1">Study Name</th>
+        <th class="rounded-s-lg text-left px-2 py-1">Study Name</th>
         <th class="text-left px-2 py-1">Study Type</th>
         <th class="text-left px-2 py-1">Study Duration</th>
         <th class="text-left px-2 py-1">Study Location</th>
         <th class="text-left px-2 py-1">Study Date</th>
-        <th class="text-left px-2 py-1">Action</th>
+        <th class="text-left px-2 py-1 rounded-e-lg">Action</th>
       </TableTr>
     </thead>
     <tbody class="">
