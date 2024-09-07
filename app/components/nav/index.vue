@@ -1,6 +1,6 @@
 <template>
   <header class=" ">
-    <nav class="px-6 pt-6 sm:px-12 relative top-0">
+    <nav class="px-6 pt-6 sm:px-12  sticky z-50 top-0">
       <div class="flex justify-between items-center whitespace-nowrap">
         <!-- icon -->
         <div
@@ -39,6 +39,7 @@
         >
           <Icon name="mingcute:close-fill" class="size-7 text-text" />
         </button>
+        
         <div v-if="isLargeScreen" class="">
           <NavMenu class="gap-x-2" />
         </div>
@@ -57,7 +58,6 @@
 </template>
 <script setup>
 const isMenuOpen = ref(false);
-import { NavMenuLink } from "#build/components";
 import { useMediaQuery } from "@vueuse/core";
 
 const isLargeScreen = useMediaQuery("(min-width: 640px)");

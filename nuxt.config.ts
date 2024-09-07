@@ -17,7 +17,12 @@ export default defineNuxtConfig({
       Poppins: true,
     },
   },
-  devtools: { enabled: true },
+  devtools: {
+    enabled: true,
+    timeline: {
+      enabled: true,
+    },
+  },
 
   // To re-enable _all_ Nuxt v3 behavior, set the following options:
   experimental: {

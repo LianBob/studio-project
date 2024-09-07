@@ -3,7 +3,7 @@
 <template>
   <div class="">
     <div
-      class="w-1/2 hidden md:block absolute md:overflow-y-hidden bg-text/80 top-0 right-0 bottom-0"
+      class="w-1/2 hidden md:block absolute  bg-text/80 top-0 right-0 bottom-0"
     ></div>
     <div class="text-center md:text-start sm:mx-16 lg:mx-0">
       <main class="flex justify-center md:mt-8 mt-8 flex-col">
